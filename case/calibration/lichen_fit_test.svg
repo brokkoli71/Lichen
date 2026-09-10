@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     width="377.08mm" height="200.0mm" viewBox="0 0 377.08 200.0">
+<title>Lichen case laser fit test</title>
+  <text x="10.000" y="25.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.000</text>
+  <path d="M 10.0000,54.0000 L 10.0000,36.0000 L 18.0000,36.0000 L 18.0000,32.0000 L 26.0000,32.0000 L 26.0000,36.0000 L 34.0000,36.0000 L 34.0000,32.0000 L 42.0000,32.0000 L 42.0000,36.0000 L 50.0000,36.0000 L 50.0000,32.0000 L 58.0000,32.0000 L 58.0000,36.0000 L 66.0000,36.0000 L 66.0000,54.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="51.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.000  TAB</text>
+  <path d="M 10.0000,59.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 18.0000,63.0000 h 8.0000 v 4.0000 h -8.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 34.0000,63.0000 h 8.0000 v 4.0000 h -8.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 50.0000,63.0000 h 8.0000 v 4.0000 h -8.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="76.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.000  HOLE</text>
+  <path d="M 10.0000,98.0000 L 10.0000,84.0000 L 18.0000,84.0000 L 18.0000,88.0000 L 26.0000,88.0000 L 26.0000,84.0000 L 34.0000,84.0000 L 34.0000,88.0000 L 42.0000,88.0000 L 42.0000,84.0000 L 50.0000,84.0000 L 50.0000,88.0000 L 58.0000,88.0000 L 58.0000,84.0000 L 66.0000,84.0000 L 66.0000,98.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="95.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.000  NOTCH</text>
+  <text x="72.000" y="25.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.050</text>
+  <path d="M 72.0000,54.0000 L 72.0000,36.0000 L 79.9500,36.0000 L 79.9500,32.0000 L 88.0500,32.0000 L 88.0500,36.0000 L 95.9500,36.0000 L 95.9500,32.0000 L 104.0500,32.0000 L 104.0500,36.0000 L 111.9500,36.0000 L 111.9500,32.0000 L 120.0500,32.0000 L 120.0500,36.0000 L 128.0000,36.0000 L 128.0000,54.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="51.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.050  TAB</text>
+  <path d="M 72.0000,59.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 80.0500,63.0500 h 7.9000 v 3.9000 h -7.9000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 96.0500,63.0500 h 7.9000 v 3.9000 h -7.9000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 112.0500,63.0500 h 7.9000 v 3.9000 h -7.9000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="76.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.050  HOLE</text>
+  <path d="M 72.0000,98.0000 L 72.0000,84.0000 L 80.0500,84.0000 L 80.0500,88.0000 L 87.9500,88.0000 L 87.9500,84.0000 L 96.0500,84.0000 L 96.0500,88.0000 L 103.9500,88.0000 L 103.9500,84.0000 L 112.0500,84.0000 L 112.0500,88.0000 L 119.9500,88.0000 L 119.9500,84.0000 L 128.0000,84.0000 L 128.0000,98.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="95.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.050  NOTCH</text>
+  <text x="134.000" y="25.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.075</text>
+  <path d="M 134.0000,54.0000 L 134.0000,36.0000 L 141.9250,36.0000 L 141.9250,32.0000 L 150.0750,32.0000 L 150.0750,36.0000 L 157.9250,36.0000 L 157.9250,32.0000 L 166.0750,32.0000 L 166.0750,36.0000 L 173.9250,36.0000 L 173.9250,32.0000 L 182.0750,32.0000 L 182.0750,36.0000 L 190.0000,36.0000 L 190.0000,54.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="51.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.075  TAB</text>
+  <path d="M 134.0000,59.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 142.0750,63.0750 h 7.8500 v 3.8500 h -7.8500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 158.0750,63.0750 h 7.8500 v 3.8500 h -7.8500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 174.0750,63.0750 h 7.8500 v 3.8500 h -7.8500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="76.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.075  HOLE</text>
+  <path d="M 134.0000,98.0000 L 134.0000,84.0000 L 142.0750,84.0000 L 142.0750,88.0000 L 149.9250,88.0000 L 149.9250,84.0000 L 158.0750,84.0000 L 158.0750,88.0000 L 165.9250,88.0000 L 165.9250,84.0000 L 174.0750,84.0000 L 174.0750,88.0000 L 181.9250,88.0000 L 181.9250,84.0000 L 190.0000,84.0000 L 190.0000,98.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="95.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.075  NOTCH</text>
+  <text x="196.000" y="25.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.100</text>
+  <path d="M 196.0000,54.0000 L 196.0000,36.0000 L 203.9000,36.0000 L 203.9000,32.0000 L 212.1000,32.0000 L 212.1000,36.0000 L 219.9000,36.0000 L 219.9000,32.0000 L 228.1000,32.0000 L 228.1000,36.0000 L 235.9000,36.0000 L 235.9000,32.0000 L 244.1000,32.0000 L 244.1000,36.0000 L 252.0000,36.0000 L 252.0000,54.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="51.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.100  TAB</text>
+  <path d="M 196.0000,59.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 204.1000,63.1000 h 7.8000 v 3.8000 h -7.8000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 220.1000,63.1000 h 7.8000 v 3.8000 h -7.8000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 236.1000,63.1000 h 7.8000 v 3.8000 h -7.8000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="76.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.100  HOLE</text>
+  <path d="M 196.0000,98.0000 L 196.0000,84.0000 L 204.1000,84.0000 L 204.1000,88.0000 L 211.9000,88.0000 L 211.9000,84.0000 L 220.1000,84.0000 L 220.1000,88.0000 L 227.9000,88.0000 L 227.9000,84.0000 L 236.1000,84.0000 L 236.1000,88.0000 L 243.9000,88.0000 L 243.9000,84.0000 L 252.0000,84.0000 L 252.0000,98.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="95.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.100  NOTCH</text>
+  <text x="10.000" y="105.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.125</text>
+  <path d="M 10.0000,134.0000 L 10.0000,116.0000 L 17.8750,116.0000 L 17.8750,112.0000 L 26.1250,112.0000 L 26.1250,116.0000 L 33.8750,116.0000 L 33.8750,112.0000 L 42.1250,112.0000 L 42.1250,116.0000 L 49.8750,116.0000 L 49.8750,112.0000 L 58.1250,112.0000 L 58.1250,116.0000 L 66.0000,116.0000 L 66.0000,134.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="131.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.125  TAB</text>
+  <path d="M 10.0000,139.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 18.1250,143.1250 h 7.7500 v 3.7500 h -7.7500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 34.1250,143.1250 h 7.7500 v 3.7500 h -7.7500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 50.1250,143.1250 h 7.7500 v 3.7500 h -7.7500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="156.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.125  HOLE</text>
+  <path d="M 10.0000,178.0000 L 10.0000,164.0000 L 18.1250,164.0000 L 18.1250,168.0000 L 25.8750,168.0000 L 25.8750,164.0000 L 34.1250,164.0000 L 34.1250,168.0000 L 41.8750,168.0000 L 41.8750,164.0000 L 50.1250,164.0000 L 50.1250,168.0000 L 57.8750,168.0000 L 57.8750,164.0000 L 66.0000,164.0000 L 66.0000,178.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="12.500" y="175.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.125  NOTCH</text>
+  <text x="72.000" y="105.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.150</text>
+  <path d="M 72.0000,134.0000 L 72.0000,116.0000 L 79.8500,116.0000 L 79.8500,112.0000 L 88.1500,112.0000 L 88.1500,116.0000 L 95.8500,116.0000 L 95.8500,112.0000 L 104.1500,112.0000 L 104.1500,116.0000 L 111.8500,116.0000 L 111.8500,112.0000 L 120.1500,112.0000 L 120.1500,116.0000 L 128.0000,116.0000 L 128.0000,134.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="131.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.150  TAB</text>
+  <path d="M 72.0000,139.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 80.1500,143.1500 h 7.7000 v 3.7000 h -7.7000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 96.1500,143.1500 h 7.7000 v 3.7000 h -7.7000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 112.1500,143.1500 h 7.7000 v 3.7000 h -7.7000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="156.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.150  HOLE</text>
+  <path d="M 72.0000,178.0000 L 72.0000,164.0000 L 80.1500,164.0000 L 80.1500,168.0000 L 87.8500,168.0000 L 87.8500,164.0000 L 96.1500,164.0000 L 96.1500,168.0000 L 103.8500,168.0000 L 103.8500,164.0000 L 112.1500,164.0000 L 112.1500,168.0000 L 119.8500,168.0000 L 119.8500,164.0000 L 128.0000,164.0000 L 128.0000,178.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="74.500" y="175.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.150  NOTCH</text>
+  <text x="134.000" y="105.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.175</text>
+  <path d="M 134.0000,134.0000 L 134.0000,116.0000 L 141.8250,116.0000 L 141.8250,112.0000 L 150.1750,112.0000 L 150.1750,116.0000 L 157.8250,116.0000 L 157.8250,112.0000 L 166.1750,112.0000 L 166.1750,116.0000 L 173.8250,116.0000 L 173.8250,112.0000 L 182.1750,112.0000 L 182.1750,116.0000 L 190.0000,116.0000 L 190.0000,134.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="131.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.175  TAB</text>
+  <path d="M 134.0000,139.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 142.1750,143.1750 h 7.6500 v 3.6500 h -7.6500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 158.1750,143.1750 h 7.6500 v 3.6500 h -7.6500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 174.1750,143.1750 h 7.6500 v 3.6500 h -7.6500 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="156.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.175  HOLE</text>
+  <path d="M 134.0000,178.0000 L 134.0000,164.0000 L 142.1750,164.0000 L 142.1750,168.0000 L 149.8250,168.0000 L 149.8250,164.0000 L 158.1750,164.0000 L 158.1750,168.0000 L 165.8250,168.0000 L 165.8250,164.0000 L 174.1750,164.0000 L 174.1750,168.0000 L 181.8250,168.0000 L 181.8250,164.0000 L 190.0000,164.0000 L 190.0000,178.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="136.500" y="175.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.175  NOTCH</text>
+  <text x="196.000" y="105.500" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">burn = 0.250</text>
+  <path d="M 196.0000,134.0000 L 196.0000,116.0000 L 203.7500,116.0000 L 203.7500,112.0000 L 212.2500,112.0000 L 212.2500,116.0000 L 219.7500,116.0000 L 219.7500,112.0000 L 228.2500,112.0000 L 228.2500,116.0000 L 235.7500,116.0000 L 235.7500,112.0000 L 244.2500,112.0000 L 244.2500,116.0000 L 252.0000,116.0000 L 252.0000,134.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="131.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.250  TAB</text>
+  <path d="M 196.0000,139.0000 h 56.0000 v 20.0000 h -56.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 204.2500,143.2500 h 7.5000 v 3.5000 h -7.5000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 220.2500,143.2500 h 7.5000 v 3.5000 h -7.5000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 236.2500,143.2500 h 7.5000 v 3.5000 h -7.5000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="156.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.250  HOLE</text>
+  <path d="M 196.0000,178.0000 L 196.0000,164.0000 L 204.2500,164.0000 L 204.2500,168.0000 L 211.7500,168.0000 L 211.7500,164.0000 L 220.2500,164.0000 L 220.2500,168.0000 L 227.7500,168.0000 L 227.7500,164.0000 L 236.2500,164.0000 L 236.2500,168.0000 L 243.7500,168.0000 L 243.7500,164.0000 L 252.0000,164.0000 L 252.0000,178.0000 Z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="198.500" y="175.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">0.250  NOTCH</text>
+  <text x="262.000" y="23.000" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">KERF COMB</text>
+  <path d="M 262.0000,26.0000 h 100.0000 v 15.0000 h -100.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 272.0000,26.0000 L 272.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 282.0000,26.0000 L 282.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 292.0000,26.0000 L 292.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 302.0000,26.0000 L 302.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 312.0000,26.0000 L 312.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 322.0000,26.0000 L 322.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 332.0000,26.0000 L 332.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 342.0000,26.0000 L 342.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 352.0000,26.0000 L 352.0000,41.0000" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="262.000" y="45.500" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">butt all 10 slices, measure L:   kerf = (100 - L) / 10</text>
+  <text x="262.000" y="54.000" style="font-family:Liberation Sans;font-size:3.6px;fill:#0000ff;font-weight:bold" text-anchor="start">THICKNESS GAUGE</text>
+  <path d="M 262.0000,57.0000 h 108.0000 v 22.0000 h -108.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <path d="M 266.0000,61.2500 h 10.0000 v 3.5000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="271.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">3.5</text>
+  <path d="M 281.0000,61.2000 h 10.0000 v 3.6000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="286.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">3.6</text>
+  <path d="M 296.0000,61.1500 h 10.0000 v 3.7000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="301.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">3.7</text>
+  <path d="M 311.0000,61.1000 h 10.0000 v 3.8000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="316.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">3.8</text>
+  <path d="M 326.0000,61.0500 h 10.0000 v 3.9000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="331.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">3.9</text>
+  <path d="M 341.0000,61.0000 h 10.0000 v 4.0000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="346.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">4.0</text>
+  <path d="M 356.0000,60.9500 h 10.0000 v 4.1000 h -10.0000 z" fill="none" stroke="#000000" stroke-width="0.05" />
+  <text x="361.000" y="70.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="middle">4.1</text>
+  <text x="264.000" y="76.000" style="font-family:Liberation Sans;font-size:3.0px;fill:#0000ff" text-anchor="start">push an offcut in edge-on:  real t = snug w + kerf</text>
+  <text x="262.000" y="92.000" style="font-family:Liberation Sans;font-size:4.0px;fill:#0000ff;font-weight:bold" text-anchor="start">HOW TO USE</text>
+  <text x="262.000" y="98.000" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">Cut BLACK only. BLUE is engrave/label.</text>
+  <text x="262.000" y="102.600" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">One sheet of the real case material.</text>
+  <text x="262.000" y="107.200" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start"></text>
+  <text x="262.000" y="111.800" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">1  Kerf comb -&gt; kerf k.</text>
+  <text x="262.000" y="116.400" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">2  Thickness gauge -&gt; real t.</text>
+  <text x="262.000" y="121.000" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">3  Push each TAB into its own HOLE and</text>
+  <text x="262.000" y="125.600" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">     NOTCH (same number only).</text>
+  <text x="262.000" y="130.200" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">4  Best = firm, seats by hand, no split.</text>
+  <text x="262.000" y="134.800" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start"></text>
+  <text x="262.000" y="139.400" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">Then regenerate the case with:</text>
+  <text x="262.000" y="144.000" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">     --burn=&lt;winner&gt;  --thickness=&lt;real t&gt;</text>
+  <text x="262.000" y="148.600" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start"></text>
+  <text x="262.000" y="153.200" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">Drawn interference = 4*burn - 2*kerf</text>
+  <text x="262.000" y="157.800" style="font-family:Liberation Sans;font-size:3.2px;fill:#0000ff" text-anchor="start">burn 0.000 = the current lichen file.</text>
+  <text x="10.000" y="12.000" style="font-family:Liberation Sans;font-size:5.5px;fill:#0000ff;font-weight:bold" text-anchor="start">LICHEN CASE - LASER FIT TEST</text>
+  <text x="10.000" y="18.000" style="font-family:Liberation Sans;font-size:3.4px;fill:#0000ff" text-anchor="start">boxes.py burn sweep  |  finger 8.0  |  nominal thickness 4.0  |  loose &lt;- burn -&gt; tight</text>
+</svg>
