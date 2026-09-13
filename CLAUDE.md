@@ -39,5 +39,6 @@ OFL permits. Copyright holders: Hannes Spitz and Moritz Seppelt.
 
 ## Conventions
 
-Case SVGs: `#000000` = cut, `#ff0000` / `#00ff00` = engrave and markers. The
-calibration sheets use `#0000ff` for engrave instead. Millimetres throughout.
+Case SVGs: `#000000` = cut, `#00ff00` = engrave (the logo), `#ff0000` = ignore
+(placement markers and working labels). The calibration sheets use `#0000ff` for
+engrave instead. Millimetres throughout.

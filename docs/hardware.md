@@ -14,8 +14,8 @@ them on a small OLED and serving them over HTTP.
 | Power switch | Mini rocker switch, KCD1-101 style (19 × 13 mm panel cutout) |
 | Case | 4 mm plywood, lasercut — see [`../case/`](../case/) |
 
-Two sensors, not one: the MQ135 covers air quality and the DHT11 covers both
-temperature and humidity. That's why the case has separate `Co2` and `temp` openings.
+Two sensors: the MQ135 covers air quality, the DHT11 covers both temperature and
+humidity — hence the separate `Co2` and `temp` openings in the case.
 
 > **The MQ135 is not a CO2 sensor.** It's a tin-oxide sensor that responds to VOCs,
 > ammonia, benzene, smoke and alcohol as much as to CO2, and the firmware converts its
@@ -56,5 +56,5 @@ tight M3.
 All of these were fitted by hand against the real parts and carry **no kerf
 compensation** — do not "correct" them. See [`../case/CLAUDE.md`](../case/CLAUDE.md).
 
-> ⚠️ The 19.0 × 31.0 sensor board footprint is drawn in **red** and is a marker, not a
-> cutout. If red maps to cut on your laser it puts a hole through the back panel.
+The 19.0 × 31.0 board footprint is a placement marker rather than an opening; it is
+drawn in red, which is the ignore layer.

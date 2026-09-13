@@ -9,17 +9,12 @@ archive/lichen/lichen.ino   <- superseded, kept for reference
 secrets.h.example           <- template, copy next to the sketch you build
 ```
 
-| sketch | status |
-|---|---|
-| **`lichen2`** | **current** — non-blocking loop, Wi-Fi state machine, debounced switch, scrolling graphs |
-| `archive/lichen` | superseded. Blocking loop, plain text readout, no graphs |
-
-Both target the same wiring and expose the same endpoint, so either will run on the
-hardware. New work goes in `lichen2`.
+`lichen2` has a non-blocking loop, a Wi-Fi state machine, a debounced switch and
+scrolling graphs; the archived one is a blocking loop with a plain text readout. Both
+use the same wiring and expose the same endpoint.
 
 Each sketch sits in a folder named after it because the Arduino IDE requires that, and
-because it concatenates every `.ino` in a folder into a single compilation unit — two
-sketches in one folder would collide on `setup()` and `loop()`.
+concatenates every `.ino` in a folder into one compilation unit.
 
 ## Wiring
 
@@ -51,14 +46,8 @@ const char* ssid     = "your ssid";
 const char* password = "your password";
 ```
 
-Both sketches `#include "secrets.h"`, so the build fails with a missing-header error
-until you've made it — that's deliberate, it's the reminder. Never put real credentials
-in a `.ino`; this is a public repo and a password committed once stays in the history.
-
-`lichen2.ino` connects only while the switch is on, with a 15 s timeout, and shows a
-status icon in the bottom-right of the display: dot only = radio off, animating arcs =
-connecting, full arcs = connected, arcs with a slash = failed. A failed attempt retries
-when the switch is cycled off and on again.
+The build fails with a missing-header error until you've created it. Never put real
+credentials in a `.ino` — this repo is public.
 
 ## HTTP API
 
@@ -83,9 +72,8 @@ GET /mq135  ->  application/json
 
 `wifi_state`: `0` off, `1` connecting, `2` connected, `3` failed.
 
-`queue` holds up to 128 samples taken every 5 s — a little under 11 minutes of history.
-`lichen2.ino` returns only slots that contain real data; `lichen.ino` stops at the first
-zero, which also truncates on a genuine zero reading.
+`queue` holds up to 128 samples taken every 5 s — a little under 11 minutes of history,
+and only slots containing real data are returned.
 
 > **`ppm` is not a calibrated concentration.** The conversion is
 > `map(adc, 0, 4095, 400, 5000)` — a linear rescale of the raw ADC into the range
@@ -104,11 +92,14 @@ Arduino IDE / arduino-cli with the ESP32 core, plus:
 
 `WiFi.h` and `Wire.h` come with the ESP32 core.
 
-
 ## Behaviour
 
-With the switch off, the display shows `Switch OFF`, Wi-Fi is disconnected and no
-sampling happens. With it on, sensors are read every 5 s and the display cycles through
-three graphs — temperature, PPM, humidity — 5 s each, autoscaled to the data on screen.
-A failed DHT read carries the previous value forward rather than pushing a NaN, so the
-three history queues stay aligned.
+With the switch off the display shows `Switch OFF`, Wi-Fi is disconnected and nothing is
+sampled. With it on, sensors are read every 5 s and the display cycles through three
+graphs — temperature, PPM, humidity — 5 s each, autoscaled to what's on screen. A failed
+DHT read carries the previous value forward rather than pushing a NaN, so the three
+history queues stay aligned.
+
+Wi-Fi connects only while the switch is on, with a 15 s timeout, and a status icon sits
+bottom-right: dot only = radio off, animating arcs = connecting, full arcs = connected,
+arcs with a slash = failed. A failed attempt retries when the switch is cycled.

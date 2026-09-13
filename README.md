@@ -9,15 +9,6 @@ An ESP32 reads an **MQ135** air quality sensor and a **DHT11** temperature/humid
 sensor, and drives a 1.3" SH1106 OLED behind an arched plywood shell that bends around a
 lattice living hinge. Four lasercut parts, 24 finger joints, one sheet of 4 mm ply.
 
-## Status
-
-| | |
-|---|---|
-| Case | ✅ cut and assembled; files calibrated against the machine — see [`case/`](case/) |
-| Hardware / BOM | ✅ parts and wiring documented — see [`docs/hardware.md`](docs/hardware.md) |
-| Firmware | ✅ in the repo — see [`firmware/`](firmware/) |
-| API | ✅ one endpoint, documented below |
-
 ## Repo layout
 
 ```
@@ -53,18 +44,12 @@ GET /mq135  ->  {"current_adc", "current_ppm", "current_temperature",
 
 ## Cutting the case
 
-Two files in [`case/cut/`](case/cut/):
-
-- **`lichen_sept_9_v4.svg`** — a complete case from scratch
-- **`lichen_sept_9_v3_front_panel.svg`** — the display panel alone, to replace one panel
-  against a shell already cut
-
-They're calibrated differently on purpose. Read [`case/README.md`](case/README.md)
-before cutting — in particular, **black is the only cut colour**, and the red rectangle
-on the back panel is the sensor board footprint, not a cutout.
+[`case/cut/lichen_sept_9_v4.svg`](case/cut/) is one sheet of 4 mm plywood and gives a
+complete case. **Cut black, engrave green, ignore red.**
 
 Kerf compensation is machine-specific. [`case/calibration/`](case/calibration/) has a
 test sheet that measures your kerf and board thickness and tells you what to use.
+[`case/README.md`](case/README.md) has the detail.
 
 ## Licensing
 
