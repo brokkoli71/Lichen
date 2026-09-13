@@ -1,13 +1,16 @@
 # Lichen
 
-ESP32 sensor unit: CO2, humidity and temperature, shown on a 1.3" SH1106 OLED
+ESP32 sensor unit: air quality (MQ135), humidity and temperature (DHT11), shown
+on a 1.3" SH1106 OLED
 (128 × 64, I2C) and served over HTTP. Lasercut plywood case.
 
 ```
 case/       lasercut enclosure. Has its own CLAUDE.md with the real detail:
             geometry, joint inventory, kerf/fit history, and the traps.
 docs/       hardware.md — BOM and the measured case openings
-firmware/   ESP32 code, NOT YET IN THE REPO (on another machine)
+firmware/   ESP32 Arduino sketches. lichen2.ino is current; lichen.ino is the
+            earlier simpler version, kept for reference. Wiring + HTTP API are
+            documented in firmware/README.md
 ```
 
 ## Where to look
@@ -19,13 +22,15 @@ firmware/   ESP32 code, NOT YET IN THE REPO (on another machine)
 
 ## Open threads
 
-- Firmware is pending. When it arrives, document the HTTP API and the wiring, and fill
-  the gaps in `docs/hardware.md` (CO2 sensor model, temp/humidity sensor model, ESP32
-  variant, button part) from the source rather than guessing.
-- The case has separate `Co2` and `temp` openings, implying two sensors rather than one
-  combined part. Confirm against the firmware.
-- Three ⌀4.74 mm holes on the back panel are unidentified.
+- Three ⌀4.74 mm holes on the back panel are unidentified. Not referenced by the
+  firmware; ⌀4.9 after kerf would press-fit a 5 mm LED, but that is only a guess.
 - Nobody has verified the living hinge bends to r50 without cracking.
+- `ppm` from the API is `map(adc, 0, 4095, 400, 5000)` — a linear rescale of the raw
+  ADC, not a calibrated concentration, and the MQ135 is a general air-quality sensor
+  rather than a CO2 one. Say "air quality", not "CO2", in anything user-facing.
+- Wi-Fi credentials are literals in both sketches. A real SSID/password was committed
+  once and is still in the history of commit 6fa0bdf; that network has since been
+  changed. Do not commit real credentials.
 
 ## Licensing
 

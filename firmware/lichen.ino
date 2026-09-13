@@ -30,8 +30,8 @@ U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(
 #define INTERVAL 5000
 
 #define WIFI_TIMEOUT 15000 // 15 seconds
-const char* ssid = "Meintollerhotspot";
-const char* password = "dasistmeinpa3@";
+const char* ssid = "WIFI name here";
+const char* password = "WIFI password here";
 
 AsyncWebServer server(80);
 DHT dht(DHT_PIN, DHT_TYPE);

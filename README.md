@@ -1,6 +1,6 @@
 # Lichen
 
-A CO2, humidity and temperature sensor in a wooden case. Readings show on a small OLED
+An air quality, humidity and temperature sensor in a wooden case. Readings show on a small OLED
 on the front, and are also served over HTTP so other things can pull them.
 
 <p align="center"><img src="case/preview.png" width="720" alt="Lasercut sheet for the Lichen case"></p>

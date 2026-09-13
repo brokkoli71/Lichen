@@ -1,6 +1,7 @@
 # Lichen case
 
-Lasercut enclosure for the Lichen sensor unit — CO2, temperature, display, button, USB-C.
+Lasercut enclosure for the Lichen sensor unit — MQ135 air quality sensor, DHT11
+temperature/humidity sensor, OLED display, power switch, USB-C.
 
 ![Cut sheet](preview.png)
 
