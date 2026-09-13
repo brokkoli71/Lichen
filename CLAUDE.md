@@ -22,9 +22,6 @@ firmware/   ESP32 Arduino sketches. lichen2.ino is current; lichen.ino is the
 
 ## Open threads
 
-- Three ⌀4.74 mm holes on the back panel are unidentified. Not referenced by the
-  firmware; ⌀4.9 after kerf would press-fit a 5 mm LED, but that is only a guess.
-- Nobody has verified the living hinge bends to r50 without cracking.
 - `ppm` from the API is `map(adc, 0, 4095, 400, 5000)` — a linear rescale of the raw
   ADC, not a calibrated concentration, and the MQ135 is a general air-quality sensor
   rather than a CO2 one. Say "air quality", not "CO2", in anything user-facing.

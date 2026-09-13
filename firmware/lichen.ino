@@ -4,6 +4,8 @@
 #include <U8g2lib.h>
 #include <Wire.h>
 
+#include "secrets.h"
+
 // =====================
 // Power Switch
 // =====================
@@ -30,8 +32,8 @@ U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(
 #define INTERVAL 5000
 
 #define WIFI_TIMEOUT 15000 // 15 seconds
-const char* ssid = "WIFI name here";
-const char* password = "WIFI password here";
+// Wi-Fi credentials live in secrets.h, which is gitignored.
+// Copy secrets.h.example to secrets.h and fill it in.
 
 AsyncWebServer server(80);
 DHT dht(DHT_PIN, DHT_TYPE);

@@ -80,11 +80,6 @@ CLAUDE.md     detailed notes: geometry, joint inventory, quirks, fit history
 preview.png   render of the full sheet
 ```
 
-## Not verified
-
-Nobody has confirmed the living hinge bends to r50 without cracking. The flex slits
-have been left untouched through every revision here.
-
 ## Licence
 
 [CC BY 4.0](LICENSE) — attribution required, everything else permitted. The

@@ -27,14 +27,22 @@ would need remapping.
 
 ## Wi-Fi
 
-Credentials are literals near the top of each sketch:
+Credentials live in `secrets.h`, which is **gitignored**. Create it once:
 
-```c
-const char* ssid     = "WIFI name here";
-const char* password = "WIFI password here";
+```sh
+cp secrets.h.example secrets.h
 ```
 
-Fill them in locally and **do not commit real credentials** — this is a public repo.
+then fill in your network:
+
+```c
+const char* ssid     = "your ssid";
+const char* password = "your password";
+```
+
+Both sketches `#include "secrets.h"`, so the build fails with a missing-header error
+until you've made it — that's deliberate, it's the reminder. Never put real credentials
+in a `.ino`; this is a public repo and a password committed once stays in the history.
 
 `lichen2.ino` connects only while the switch is on, with a 15 s timeout, and shows a
 status icon in the bottom-right of the display: dot only = radio off, animating arcs =
@@ -84,6 +92,12 @@ Arduino IDE / arduino-cli with the ESP32 core, plus:
 - [U8g2](https://github.com/olikraus/u8g2)
 
 `WiFi.h` and `Wire.h` come with the ESP32 core.
+
+> **Note on folder layout.** The Arduino IDE expects one sketch per folder, named after
+> it, and concatenates every `.ino` in a folder into a single compilation unit. Both
+> sketches sitting in `firmware/` therefore won't build as-is — you'd get duplicate
+> `setup()`/`loop()`. To build, copy the sketch you want into its own folder
+> (`lichen2/lichen2.ino`) along with `secrets.h`.
 
 ## Behaviour
 

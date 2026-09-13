@@ -49,12 +49,9 @@ replacement part has to satisfy. All in mm, as cut.
 | Temp / humidity | 16.50 × 13.20 | 1 × ⌀2.85 alongside | DHT11 body is 15.5 × 12, so ~0.6 mm all round |
 | Power switch | 19.52 × 12.54 | — | KCD1-101 rocker |
 | USB-C | 12.50 × 7.00 | — | sized for the plug's plastic shell, not just the receptacle |
-| unassigned | 3 × ⌀4.74 on the back panel | — | ⬜ unidentified |
 
 ⌀2.85 as drawn cuts closer to ⌀3.0 after kerf — sized for M2.5 with clearance, or a
-tight M3. The three ⌀4.74 holes aren't referenced by the firmware; ⌀4.74 drawn cuts to
-about ⌀4.9, which would be a press fit for a 5 mm LED, but that's a guess. If you know
-what they're for, note it here.
+tight M3.
 
 All of these were fitted by hand against the real parts and carry **no kerf
 compensation** — do not "correct" them. See [`../case/CLAUDE.md`](../case/CLAUDE.md).

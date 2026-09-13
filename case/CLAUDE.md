@@ -170,7 +170,9 @@ cutout, magenta dashed) for eyeballing alignment in the laser preview.
 `#000000` = cut (34 elements in v3). `#ff0000` = labels + the CO2 marker.
 `#00ff00` = logo. Hairline `stroke-width="0.05"`, `fill:none`, boxes.py style.
 
-## Not verified
+## Living hinge
 
-The living hinge bending to r50 without cracking has never been checked in this
-work — `path4` has been left untouched throughout.
+`path4` is the lattice hinge: 77 slit lines at 2 mm pitch across the 152 mm middle
+of the shell, letting the flat 4 mm strip bend to r50. It has been cut and bent
+successfully, so it works as drawn. It carries no kerf compensation and has been
+left untouched through every revision — don't "fix" it.
