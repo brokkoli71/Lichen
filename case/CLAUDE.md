@@ -67,10 +67,13 @@ So the same burn is **tighter in thickness than in width**, and the thickness di
 has no compliance — a 4.00 mm board forced through a 3.95 mm slot splits. Thickness is
 therefore never compensated; it stays at 4.00.
 
-Empirically, the bottom plate does **not** want a tight fit: it is captured on four
-sides and glued, and a tight one cracked the ply during assembly. A coupon that feels
-"too loose" with 2 tabs is usually fine across a glued 24-joint box, so erring loose is
-much cheaper than erring tight.
+The coupon flatters a tight setting. It picked 0.1 here (0.075 read as sloppy), and
+0.1 cracked the ply during real assembly — the case settled a step looser at 0.08. If
+the fit test is re-run, don't take its answer at face value.
+
+The bottom plate does **not** want a tight fit at all: it is captured on four sides and
+glued, so it sits at 0.00. A coupon that feels "too loose" with 2 tabs is usually fine
+across a glued 24-joint box, and erring loose is much cheaper than erring tight.
 
 `cut/lichen_sept_9_v4.svg`:
 

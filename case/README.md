@@ -53,8 +53,15 @@ matched tab/socket pairs, and measures your kerf and real board thickness. Cut i
 the material you'll use — both move with the stock. It engraves in blue, unlike the
 case files.
 
-Read the result as a starting point and expect to go a step looser: two tabs pushed
-together by hand feel firmer than the same fit does across 24 joints at once.
+Read the result as a starting point and expect to go a step looser. Two tabs pushed
+together by hand feel firmer than the same fit does across 24 joints going together at
+once, so the coupon tends to flatter a tight setting.
+
+This case as a worked example: on the coupon 0.075 felt sloppy and **0.1 felt right**,
+so 0.1 is what got cut. Assembled, it was too tight — the ply cracked around the joints
+as the parts went home. The case now uses **0.08**, one step looser than the coupon
+chose, and the bottom plate is at **0.00** because a loose fit there costs nothing. If
+your coupon lands on a value, consider the next one down.
 
 ## Layout
 
