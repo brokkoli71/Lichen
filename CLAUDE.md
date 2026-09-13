@@ -8,9 +8,10 @@ on a 1.3" SH1106 OLED
 case/       lasercut enclosure. Has its own CLAUDE.md with the real detail:
             geometry, joint inventory, kerf/fit history, and the traps.
 docs/       hardware.md — BOM and the measured case openings
-firmware/   ESP32 Arduino sketches. lichen2.ino is current; lichen.ino is the
-            earlier simpler version, kept for reference. Wiring + HTTP API are
-            documented in firmware/README.md
+firmware/   ESP32 Arduino sketches. lichen2/ is the one to build; archive/lichen
+            is superseded. Each sketch needs its own folder named after it --
+            Arduino requires that. Wi-Fi credentials go in a gitignored secrets.h
+            beside the .ino. Wiring + HTTP API are in firmware/README.md
 ```
 
 ## Where to look

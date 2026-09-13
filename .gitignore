@@ -9,5 +9,5 @@
 .DS_Store
 Thumbs.db
 
-# Wi-Fi credentials - copy secrets.h.example to secrets.h and fill in locally
-firmware/secrets.h
+# Wi-Fi credentials - copy firmware/secrets.h.example next to the sketch you build
+firmware/**/secrets.h

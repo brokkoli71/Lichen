@@ -3,13 +3,23 @@
 Arduino sketches for the ESP32. Sample the sensors, draw to the OLED, serve the
 readings over HTTP.
 
+```
+lichen2/lichen2.ino         <- the one to build
+archive/lichen/lichen.ino   <- superseded, kept for reference
+secrets.h.example           <- template, copy next to the sketch you build
+```
+
 | sketch | status |
 |---|---|
-| **`lichen2.ino`** | **current** — non-blocking loop, Wi-Fi state machine, debounced switch, scrolling graphs |
-| `lichen.ino` | earlier, simpler version. Kept for reference; blocking loop, plain text readout, no graphs |
+| **`lichen2`** | **current** — non-blocking loop, Wi-Fi state machine, debounced switch, scrolling graphs |
+| `archive/lichen` | superseded. Blocking loop, plain text readout, no graphs |
 
 Both target the same wiring and expose the same endpoint, so either will run on the
-hardware. New work goes in `lichen2.ino`.
+hardware. New work goes in `lichen2`.
+
+Each sketch sits in a folder named after it because the Arduino IDE requires that, and
+because it concatenates every `.ino` in a folder into a single compilation unit — two
+sketches in one folder would collide on `setup()` and `loop()`.
 
 ## Wiring
 
@@ -27,10 +37,11 @@ would need remapping.
 
 ## Wi-Fi
 
-Credentials live in `secrets.h`, which is **gitignored**. Create it once:
+Credentials live in `secrets.h`, which is **gitignored**. It has to sit next to the
+sketch you're building, because `#include "secrets.h"` resolves relative to the `.ino`:
 
 ```sh
-cp secrets.h.example secrets.h
+cp secrets.h.example lichen2/secrets.h
 ```
 
 then fill in your network:
@@ -93,11 +104,6 @@ Arduino IDE / arduino-cli with the ESP32 core, plus:
 
 `WiFi.h` and `Wire.h` come with the ESP32 core.
 
-> **Note on folder layout.** The Arduino IDE expects one sketch per folder, named after
-> it, and concatenates every `.ino` in a folder into a single compilation unit. Both
-> sketches sitting in `firmware/` therefore won't build as-is — you'd get duplicate
-> `setup()`/`loop()`. To build, copy the sketch you want into its own folder
-> (`lichen2/lichen2.ino`) along with `secrets.h`.
 
 ## Behaviour
 
