@@ -7,6 +7,7 @@ readings over HTTP.
 lichen2/lichen2.ino         <- the one to build
 archive/lichen/lichen.ino   <- superseded, kept for reference
 secrets.h.example           <- template, copy next to the sketch you build
+esphome/                    <- ESPHome + Home Assistant variant, see esphome/README.md
 ```
 
 `lichen2` has a non-blocking loop, a Wi-Fi state machine, a debounced switch and

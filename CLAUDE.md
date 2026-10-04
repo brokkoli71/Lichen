@@ -11,7 +11,9 @@ docs/       hardware.md — BOM and the measured case openings
 firmware/   ESP32 Arduino sketches. lichen2/ is the one to build; archive/lichen
             is superseded. Each sketch needs its own folder named after it --
             Arduino requires that. Wi-Fi credentials go in a gitignored secrets.h
-            beside the .ino. Wiring + HTTP API are in firmware/README.md
+            beside the .ino. Wiring + HTTP API are in firmware/README.md.
+            firmware/esphome/ is an ESPHome + Home Assistant alternative (its own
+            README); secrets go in a gitignored secrets.yaml there
 ```
 
 ## Where to look

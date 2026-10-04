@@ -1,0 +1,227 @@
+# Lichen on ESPHome: same wiring as lichen2/, reports to Home Assistant over the
+# native API and pulls the outside weather back from it for the OLED.
+# Setup and flashing: firmware/esphome/README.md
+
+substitutions:
+  name: lichen
+  # Home Assistant entities shown on the display. The forecast ones are template
+  # sensors you add in HA -- see README.md.
+  weather_entity: weather.forecast_home
+  forecast_max_entity: sensor.forecast_today_max
+  forecast_min_entity: sensor.forecast_today_min
+
+esphome:
+  name: ${name}
+  friendly_name: Lichen
+
+esp32:
+  board: esp32dev
+
+logger:
+
+api:
+  encryption:
+    key: !secret api_encryption_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  # Mains-powered, so no need for modem sleep
+  power_save_mode: none
+  # If the network is unreachable the board opens this hotspot; connect to it and
+  # pick a network from the captive portal.
+  ap:
+    ssid: "Lichen Fallback"
+    password: !secret fallback_password
+
+captive_portal:
+
+# =====================
+# View switch: GPIO25, closed to GND = ON = cycle through all pages.
+# OFF = overview page only. An unsoldered switch reads as OFF.
+# =====================
+binary_sensor:
+  - platform: gpio
+    id: view_switch
+    internal: true
+    pin:
+      number: GPIO25
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    filters:
+      - delayed_on: 50ms
+      - delayed_off: 50ms
+
+# =====================
+# Sensors
+# =====================
+sensor:
+  # MQ135 raw 12-bit reading. Deliberately not converted to "ppm": the sensor is
+  # uncalibrated and not CO2-specific, so the raw count is the honest number.
+  - platform: adc
+    id: air_quality
+    name: "Air quality"
+    pin: GPIO34
+    attenuation: 12db
+    raw: true
+    samples: 8
+    update_interval: 10s
+    accuracy_decimals: 0
+    state_class: measurement
+    unit_of_measurement: ""
+    device_class: ""
+    icon: mdi:air-filter
+
+  - platform: dht
+    model: DHT11
+    pin: GPIO27
+    update_interval: 10s
+    temperature:
+      id: inside_temp
+      name: "Temperature"
+    humidity:
+      id: inside_hum
+      name: "Humidity"
+
+  # Imported from Home Assistant, display only (internal: not sent back to HA)
+  - platform: homeassistant
+    id: outside_temp
+    entity_id: ${weather_entity}
+    attribute: temperature
+    internal: true
+  - platform: homeassistant
+    id: outside_max
+    entity_id: ${forecast_max_entity}
+    internal: true
+  - platform: homeassistant
+    id: outside_min
+    entity_id: ${forecast_min_entity}
+    internal: true
+
+# =====================
+# Display: SH1106 128x64 on I2C (SDA 23, SCL 18)
+# =====================
+i2c:
+  sda: GPIO23
+  scl: GPIO18
+
+font:
+  - file: "gfonts://Roboto"
+    id: font_small
+    size: 10
+  - file: "gfonts://Roboto"
+    id: font_large
+    size: 20
+  - file:
+      type: web
+      url: "https://github.com/Templarian/MaterialDesign-Webfont/raw/master/fonts/materialdesignicons-webfont.ttf"
+    id: font_icons
+    size: 12
+    glyphs:
+      - "\U000F05A9" # mdi-wifi
+      - "\U000F05AA" # mdi-wifi-off
+
+# Graphs keep their own history in RAM, so they start empty after every boot.
+graph:
+  - id: graph_inside_temp
+    sensor: inside_temp
+    duration: 1h
+    width: 128
+    height: 50
+    border: false
+  - id: graph_inside_hum
+    sensor: inside_hum
+    duration: 1h
+    width: 128
+    height: 50
+    border: false
+  - id: graph_air_quality
+    sensor: air_quality
+    duration: 1h
+    width: 128
+    height: 50
+    border: false
+  - id: graph_outside_temp
+    sensor: outside_temp
+    duration: 24h
+    width: 128
+    height: 50
+    border: false
+
+globals:
+  - id: page
+    type: int
+    initial_value: "0"
+
+# Switch ON: cycle overview -> inside temp -> humidity -> air quality -> outside temp
+# Switch OFF: stay on the overview
+interval:
+  - interval: 5s
+    then:
+      - lambda: |-
+          id(page) = id(view_switch).state ? (id(page) + 1) % 5 : 0;
+
+display:
+  - platform: ssd1306_i2c
+    id: oled
+    model: "SH1106 128x64"
+    address: 0x3C
+    update_interval: 500ms
+    lambda: |-
+
+      // "--" until a sensor has a usable value (DHT11 reads fail now and then)
+      auto fmt = [](char *buf, size_t n, sensor::Sensor *s, const char *f) {
+        if (s->has_state() && !std::isnan(s->state)) snprintf(buf, n, f, s->state);
+        else snprintf(buf, n, "--");
+      };
+      char a[16], b[16], c[16];
+
+      // Connection icon, top right: off = no Wi-Fi, blinking = Wi-Fi but no
+      // Home Assistant, steady = connected to Home Assistant
+      if (!wifi::global_wifi_component->is_connected()) {
+        it.print(128, 0, id(font_icons), TextAlign::TOP_RIGHT, "\U000F05AA");
+      } else if (api::global_api_server->is_connected() || (millis() / 500) % 2) {
+        it.print(128, 0, id(font_icons), TextAlign::TOP_RIGHT, "\U000F05A9");
+      }
+
+      if (id(page) == 0) {
+        it.print(0, 0, id(font_small), "Inside");
+        fmt(a, sizeof(a), id(inside_temp), "%.1f°");
+        it.print(0, 10, id(font_large), a);
+        fmt(b, sizeof(b), id(inside_hum), "%.0f %%");
+        it.print(72, 12, id(font_small), b);
+        fmt(c, sizeof(c), id(air_quality), "AQ %.0f");
+        it.print(72, 22, id(font_small), c);
+
+        it.print(0, 33, id(font_small), "Outside");
+        fmt(a, sizeof(a), id(outside_temp), "%.1f°");
+        it.print(0, 43, id(font_large), a);
+        fmt(b, sizeof(b), id(outside_max), "max %.0f°");
+        it.print(72, 43, id(font_small), b);
+        fmt(c, sizeof(c), id(outside_min), "min %.0f°");
+        it.print(72, 53, id(font_small), c);
+        return;
+      }
+
+      // Graph pages: title top left, current value next to the icon, graph below
+      const char *title;
+      graph::Graph *g;
+      switch (id(page)) {
+        case 1: title = "Inside"; g = id(graph_inside_temp);
+                fmt(a, sizeof(a), id(inside_temp), "%.1f°"); break;
+        case 2: title = "Humidity"; g = id(graph_inside_hum);
+                fmt(a, sizeof(a), id(inside_hum), "%.0f %%"); break;
+        case 3: title = "Air quality"; g = id(graph_air_quality);
+                fmt(a, sizeof(a), id(air_quality), "%.0f"); break;
+        default: title = "Outside 24h"; g = id(graph_outside_temp);
+                 fmt(a, sizeof(a), id(outside_temp), "%.1f°"); break;
+      }
+      it.print(0, 0, id(font_small), title);
+      it.print(112, 0, id(font_small), TextAlign::TOP_RIGHT, a);
+      it.graph(0, 14, g);
