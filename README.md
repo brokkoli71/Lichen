@@ -77,7 +77,7 @@ test sheet that measures your kerf and board thickness and tells you what to use
 | what | licence |
 |---|---|
 | Code (`firmware/`, and any code added later) | [MIT](LICENSE) |
-| Case design files and documentation (`case/`, `docs/`) | [CC BY 4.0](case/LICENSE) |
+| Case design files, documentation and photos (`case/`, `docs/`, `img/`) | [CC BY 4.0](case/LICENSE) |
 
 Both are permissive: use it, change it, build it, sell it — just keep the
 attribution. Note that CC BY does not grant trademark rights, so the Lichen name

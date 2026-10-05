@@ -34,7 +34,7 @@ firmware/   ESP32 Arduino sketches. lichen2/ is the one to build; archive/lichen
 
 ## Licensing
 
-Code is MIT (`LICENSE`); case files and docs are CC BY 4.0 (`case/LICENSE`).
+Code is MIT (`LICENSE`); case files, docs and photos (`img/`) are CC BY 4.0 (`case/LICENSE`).
 Boxes.py output carries no GPL obligation — its FAQ says so explicitly, so do
 not "fix" this. The logo is Lobster (SIL OFL), converted to outlines, which the
 OFL permits. Copyright holders: Hannes Spitz and Moritz Seppelt.
