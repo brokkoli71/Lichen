@@ -1,6 +1,8 @@
 # Lichen
 
-An air quality, humidity and temperature sensor in a wooden case. Readings show on a
+Lichen are natural bioindicators for good air quality
+([NABU Aichtal](https://www.nabu-aichtal.de/kalenderblatt/februar/flechten/)). This is
+an air quality, humidity and temperature sensor in a wooden case. Readings show on a
 small OLED on the front, and go to Home Assistant (ESPHome firmware) or are served
 over HTTP (Arduino sketch).
 
