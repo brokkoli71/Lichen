@@ -1,9 +1,13 @@
 # Lichen
 
 An air quality, humidity and temperature sensor in a wooden case. Readings show on a
-small OLED on the front, and are served over HTTP so other things can pull them.
+small OLED on the front, and go to Home Assistant (ESPHome firmware) or are served
+over HTTP (Arduino sketch).
 
-<p align="center"><img src="case/preview.png" width="720" alt="Lasercut sheet for the Lichen case"></p>
+<p align="center">
+  <img src="img/lichen-front.jpeg" width="400" alt="Lichen from the front: arched plywood case with the engraved logo and the OLED showing a humidity graph">
+  <img src="img/lichen-back.jpeg" width="400" alt="Lichen from the back: DHT11 and MQ135 sensors, USB-C cable and rocker switch">
+</p>
 
 An ESP32 reads an **MQ135** air quality sensor and a **DHT11** temperature/humidity
 sensor, and drives a 1.3" SH1106 OLED behind an arched plywood shell that bends around a
@@ -14,10 +18,25 @@ lattice living hinge. Four lasercut parts, 24 finger joints, one sheet of 4 mm p
 ```
 case/       lasercut enclosure — cut files, calibration sheets, archive
 docs/       hardware.md: bill of materials and the case openings
-firmware/   ESP32 sketches — lichen2/ is current, archive/ is superseded
+firmware/   esphome/ for Home Assistant; lichen2/ Arduino sketch with an HTTP API;
+            archive/ is superseded
+img/        photos of the finished unit
 ```
 
-## Firmware and API
+## Home Assistant (ESPHome)
+
+[`firmware/esphome/`](firmware/esphome/) is an [ESPHome](https://esphome.io) config
+for the same wiring. It reports temperature, humidity and air quality to Home Assistant,
+which keeps the history, and pulls the outside temperature, today's forecast max and
+expected rain back from HA for the display. The OLED shows an overview page; with the
+switch on it cycles through that and four graphs. After the first USB flash, updates go
+over Wi-Fi.
+
+Air quality is the raw MQ135 reading (higher = worse air), not a concentration; see the
+note below. Setup, flashing, adding it to HA and the forecast template sensors are in
+[`firmware/esphome/README.md`](firmware/esphome/README.md).
+
+## Arduino sketch and HTTP API
 
 [`firmware/lichen2/`](firmware/lichen2/) is the sketch to build; `firmware/archive/`
 holds the earlier version. Wiring, dependencies and the full API are in
@@ -43,6 +62,8 @@ GET /mq135  ->  {"current_adc", "current_ppm", "current_temperature",
 > `current_adc` is the honest number.
 
 ## Cutting the case
+
+<p align="center"><img src="case/preview.png" width="720" alt="Lasercut sheet for the Lichen case"></p>
 
 [`case/cut/lichen_sept_9_v4.svg`](case/cut/) is one sheet of 4 mm plywood and gives a
 complete case. **Cut black, engrave green, ignore red.**
