@@ -8,7 +8,7 @@ substitutions:
   # sensors you add in HA -- see README.md.
   weather_entity: weather.forecast_home
   forecast_max_entity: sensor.forecast_today_max
-  forecast_min_entity: sensor.forecast_today_min
+  forecast_rain_entity: sensor.forecast_today_precipitation
 
 esphome:
   name: ${name}
@@ -100,8 +100,8 @@ sensor:
     entity_id: ${forecast_max_entity}
     internal: true
   - platform: homeassistant
-    id: outside_min
-    entity_id: ${forecast_min_entity}
+    id: outside_rain
+    entity_id: ${forecast_rain_entity}
     internal: true
 
 # =====================
@@ -204,7 +204,11 @@ display:
         it.print(0, 43, id(font_large), a);
         fmt(b, sizeof(b), id(outside_max), "max %.0f°");
         it.print(72, 43, id(font_small), b);
-        fmt(c, sizeof(c), id(outside_min), "min %.0f°");
+        // Today's forecast precipitation in mm; under 0.1 counts as dry
+        float rain = id(outside_rain).state;
+        if (!id(outside_rain).has_state() || std::isnan(rain)) snprintf(c, sizeof(c), "rain --");
+        else if (rain < 0.1f) snprintf(c, sizeof(c), "no rain");
+        else snprintf(c, sizeof(c), "rain %.1fmm", rain);
         it.print(72, 53, id(font_small), c);
         return;
       }

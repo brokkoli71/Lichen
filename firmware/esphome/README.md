@@ -14,7 +14,7 @@ the history, so there's no on-device queue.
 through five pages instead:
 
 1. Overview: inside temperature, humidity and air quality, then outside temperature
-   with today's forecast max/min
+   with today's forecast max and rain
 2. Inside temperature, last hour
 3. Humidity, last hour
 4. Air quality, last hour
@@ -86,8 +86,8 @@ The current outside temperature comes from the `temperature` attribute of a weat
 entity, by default `weather.forecast_home` (the Met.no integration HA sets up during
 onboarding).
 
-Weather entities no longer carry the forecast as attributes, so the daily max/min need
-two template sensors in HA's `configuration.yaml`:
+Weather entities no longer carry the forecast as attributes, so today's max and rain
+need two template sensors in HA's `configuration.yaml`:
 
 ```yaml
 template:
@@ -109,12 +109,14 @@ template:
         unit_of_measurement: "°C"
         device_class: temperature
         state: "{{ daily['weather.forecast_home'].forecast[0].temperature }}"
-      - name: Forecast today min
-        unique_id: forecast_today_min
-        unit_of_measurement: "°C"
-        device_class: temperature
-        state: "{{ daily['weather.forecast_home'].forecast[0].templow }}"
+      - name: Forecast today precipitation
+        unique_id: forecast_today_precipitation
+        unit_of_measurement: "mm"
+        device_class: precipitation
+        state: "{{ daily['weather.forecast_home'].forecast[0].precipitation | default(0) }}"
 ```
+
+The display shows `no rain` below 0.1 mm, otherwise the expected amount.
 
 Restart HA after adding this. If your entity names differ, change the `substitutions:`
 at the top of `lichen.yaml`. Until a value arrives, the display shows `--`.
